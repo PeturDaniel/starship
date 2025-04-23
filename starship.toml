@@ -1,4 +1,5 @@
 
+
 # Starship Prompt Configuration
 # Place this in ~/.config/starship.toml
 
@@ -30,12 +31,12 @@ truncation_symbol = '.../'
 [git_branch]
 symbol = ""
 style = "fg:#f1fa8c bg:#44475a"
-format = " [$symbol $branch ]($style)"
+format = "[$symbol $branch ]($style)"
 
 # Git Status
 [git_status]
 style = "fg:#ff5555 bg:#44475a"
-format = '([ $all_status$ahead_behind ]($style))'
+format = '([$all_status$ahead_behind]($style))'
 conflicted = "⚔️ "
 ahead = "⇡${count}"
 behind = "⇣${count}"
