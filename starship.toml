@@ -1,0 +1,88 @@
+
+# Starship Prompt Configuration
+# Place this in ~/.config/starship.toml
+
+format = """
+[](fg:#bd93f9)\
+$directory\
+[](fg:#bd93f9 bg:#44475a)\
+$git_branch\
+$git_status\
+[](fg:#44475a bg:none)\
+$nodejs\
+$python\
+$rust\
+$golang\
+$cmd_duration\
+$line_break\
+$character
+"""
+
+# Directory
+[directory]
+style = "fg:#282a36 bg:#bd93f9"
+format = "[  $path ]($style)"
+truncate_to_repo = false
+truncation_length = 5
+truncation_symbol = '.../'
+
+# Git Branch
+[git_branch]
+symbol = ""
+style = "fg:#f1fa8c bg:#44475a"
+format = " [$symbol $branch ]($style)"
+
+# Git Status
+[git_status]
+style = "fg:#ff5555 bg:#44475a"
+format = '([ $all_status$ahead_behind ]($style))'
+conflicted = "⚔️ "
+ahead = "⇡${count}"
+behind = "⇣${count}"
+diverged = "⇕⇡${ahead_count}⇣${behind_count}"
+untracked = " "
+stashed = "📦 "
+modified = " "
+staged = "✓"
+renamed = " "
+deleted = "🗑️ "
+
+# Node.js
+[nodejs]
+symbol = ""
+style = "fg:#50fa7b"
+format = " [$symbol $version]($style)"
+
+# Python
+[python]
+symbol = ""
+style = "fg:#ffb86c"
+format = " [$symbol $version]($style)"
+pyenv_version_name = true
+
+# Rust
+[rust]
+symbol = ""
+style = "fg:#ff5555"
+format = " [$symbol $version]($style)"
+
+# Golang
+[golang]
+symbol = ""
+style = "fg:#00afff"
+format = " [$symbol $version]($style)"
+
+# Command Duration
+[cmd_duration]
+min_time = 1000
+format = " 🕒 [$duration](fg:#8be9fd italic)"
+style = "fg:#8be9fd"
+
+# Character (prompt symbol)
+[character]
+success_symbol = "[❯](bold green)"
+error_symbol = "[❯](bold red)"
+
+# Line Break (for aesthetics)
+[line_break]
+disabled = false
