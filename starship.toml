@@ -1,5 +1,6 @@
 
 
+
 # Starship Prompt Configuration
 # Place this in ~/.config/starship.toml
 
@@ -58,7 +59,7 @@ format = " [$symbol $version]($style)"
 [python]
 symbol = ""
 style = "fg:#ffb86c"
-format = " [$symbol $version]($style)"
+format = ' [$symbol $version($virtualenv)]($style)'
 pyenv_version_name = true
 
 # Rust
